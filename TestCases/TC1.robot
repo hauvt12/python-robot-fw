@@ -1,11 +1,13 @@
 *** Settings ***
+Resource   ../pageObjects/MeetingRoomAPO.robot
+# Resource   ../config/ApplicationVariables.robot
 Library  SeleniumLibrary
 
 
 *** Variables ***
 ${URL}  https://team.vsee.me/u/robin4
 ${CHROME_OPTS}  NONE
-${USER_NAME_A}  User A
+#${USER_NAME_A}  User A
 ${USER_NAME_B}  User B
 ${CHECKBOX_ID}    jsonform-1-elt-consent
 ${BUTTON_ENTER_LOCATOR}     //input[@value='Enter Waiting Room']
@@ -17,21 +19,8 @@ ${USERNAME}     monluoian@gmail.com
 ${PASSWORD}     devLab08@123
 ${BUTTON_SIGN_IN_ID}    btnSignIn
 *** Test Cases ***
-
 JOIN MEETING ROOM WITH USER A
-    [Documentation]  Open browser
-    ${options}=    Evaluate    selenium.webdriver.chrome.options.Options()    selenium.webdriver.chrome
-    Call Method    ${options}    add_argument    --use-fake-ui-for-media-stream
-    Call Method    ${options}    add_argument    --use-fake-device-for-media-stream
-    Create WebDriver    Chrome    options=${options}
-    go to    ${URL}
-    input text  name:first_name     ${USER_NAME_A}
-    select checkbox     id:${CHECKBOX_ID}
-    click element   xpath:${BUTTON_ENTER_LOCATOR}
-    sleep   30s
-    click element   xpath:${CONTINUE_BUTTON_LOCATOR}
-    sleep   30s
-
+    Join Meeting Room With User A 
 
 
 JOIN MEETING ROOM WITH USER B
