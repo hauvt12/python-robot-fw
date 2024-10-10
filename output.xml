@@ -1,254 +1,371 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1 (Python 3.11.0 on win32)" generated="2024-10-09T23:51:05.097506" rpa="false" schemaversion="5">
+<robot generator="Robot 7.1 (Python 3.11.0 on win32)" generated="2024-10-10T22:50:07.607232" rpa="false" schemaversion="5">
 <suite id="s1" name="TC1" source="D:\fpt\project_vothanhhau\python-robot-framework\python-robot-fw\TestCases\TC1.robot">
-<test id="s1-t1" name="JOIN MEETING ROOM WITH USER A" line="22">
+<test id="s1-t1" name="JOIN MEETING ROOM WITH USER A" line="9">
 <kw name="Join Meeting Room With User A" owner="MeetingRoomAPO">
 <kw name="Open Browser And Navigate To Page [Arguments] ${USER_NAME_A}" owner="CommonPO" source_name="Open Browser And Navigate To Page [Arguments] ${user_name}">
 <kw name="Run Keyword If" owner="BuiltIn">
 <kw name="Open Chrome With Fake Media" owner="CommonPO">
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2024-10-09T23:51:05.436949" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000002179E4E9A90&gt;</msg>
+<msg time="2024-10-10T22:50:07.863905" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000001DBEC59BE10&gt;</msg>
 <var>${options}</var>
 <arg>selenium.webdriver.chrome.options.Options()</arg>
 <arg>selenium.webdriver.chrome</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2024-10-09T23:51:05.436949" elapsed="0.000000"/>
+<status status="PASS" start="2024-10-10T22:50:07.863905" elapsed="0.000000"/>
 </kw>
 <kw name="Call Method" owner="BuiltIn">
 <arg>${options}</arg>
 <arg>add_argument</arg>
 <arg>--use-fake-ui-for-media-stream</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" start="2024-10-09T23:51:05.436949" elapsed="0.000000"/>
+<status status="PASS" start="2024-10-10T22:50:07.863905" elapsed="0.000000"/>
 </kw>
 <kw name="Call Method" owner="BuiltIn">
 <arg>${options}</arg>
 <arg>add_argument</arg>
 <arg>--use-fake-device-for-media-stream</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" start="2024-10-09T23:51:05.436949" elapsed="0.000000"/>
+<status status="PASS" start="2024-10-10T22:50:07.863905" elapsed="0.000000"/>
 </kw>
 <kw name="Create Webdriver" owner="SeleniumLibrary">
-<msg time="2024-10-09T23:51:05.436949" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<msg time="2024-10-10T22:50:07.863905" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
 <arg>Chrome</arg>
 <arg>options=${options}</arg>
 <doc>Creates an instance of Selenium WebDriver.</doc>
-<status status="PASS" start="2024-10-09T23:51:05.436949" elapsed="2.008193"/>
+<status status="PASS" start="2024-10-10T22:50:07.863905" elapsed="1.499487"/>
 </kw>
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2024-10-09T23:51:07.446145" level="INFO">Opening url 'https://team.vsee.me/u/robin4'</msg>
+<msg time="2024-10-10T22:50:09.364405" level="INFO">Opening url 'https://team.vsee.me/u/robin4'</msg>
 <arg>${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2024-10-09T23:51:07.446145" elapsed="1.628534"/>
+<status status="PASS" start="2024-10-10T22:50:09.364405" elapsed="1.328381"/>
 </kw>
-<status status="PASS" start="2024-10-09T23:51:05.436949" elapsed="3.638728"/>
+<status status="PASS" start="2024-10-10T22:50:07.863905" elapsed="2.828881"/>
 </kw>
 <arg>'${user_name}' == '${USER_NAME_A}'</arg>
 <arg>Open Chrome With Fake Media</arg>
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2024-10-09T23:51:05.436949" elapsed="3.638728"/>
+<status status="PASS" start="2024-10-10T22:50:07.863905" elapsed="2.828881"/>
 </kw>
 <kw name="Run Keyword If" owner="BuiltIn">
 <arg>'${user_name}' == '${USER_NAME_B}'</arg>
-<arg>Open Browser</arg>
-<arg>${URL}</arg>
-<arg>edge</arg>
+<arg>Open Edge With Fake Media</arg>
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2024-10-09T23:51:09.075677" elapsed="0.000000"/>
+<status status="PASS" start="2024-10-10T22:50:10.692786" elapsed="0.002892"/>
 </kw>
 <doc>Opens a browser and navigates to a specified URL based on the user name.</doc>
-<status status="PASS" start="2024-10-09T23:51:05.436949" elapsed="3.639729"/>
+<status status="PASS" start="2024-10-10T22:50:07.863905" elapsed="2.831773"/>
 </kw>
-<kw name="Input Text [Arguments] ${firstName} ${USER_NAME_A}" owner="CommonPO" source_name="Input Text [Arguments] ${element} ${value}">
+<kw name="Input Text [Arguments] ${FIRST_NAME_INPUT} ${USER_NAME_A}" owner="CommonPO" source_name="Input Text [Arguments] ${element} ${value}">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-10-09T23:51:09.077677" level="INFO">Typing text 'User A' into text field 'name=first_name'.</msg>
+<msg time="2024-10-10T22:50:10.699465" level="INFO">Typing text 'User A' into text field 'name=first_name'.</msg>
 <arg>${element}</arg>
 <arg>${value}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-10-09T23:51:09.077677" elapsed="0.233821"/>
+<status status="PASS" start="2024-10-10T22:50:10.698178" elapsed="0.166997"/>
 </kw>
-<status status="PASS" start="2024-10-09T23:51:09.076678" elapsed="0.234820"/>
+<status status="PASS" start="2024-10-10T22:50:10.697176" elapsed="0.167999"/>
 </kw>
-<kw name="Select Checkbox [Arguments] ${checkboxID}" owner="CommonPO" source_name="Select Checkbox [Arguments] ${element}">
+<kw name="Select Checkbox [Arguments] ${CHECKBOX_ID}" owner="CommonPO" source_name="Select Checkbox [Arguments] ${element}">
 <kw name="Select Checkbox" owner="SeleniumLibrary">
-<msg time="2024-10-09T23:51:09.311498" level="INFO">Selecting checkbox 'jsonform-1-elt-consent'.</msg>
+<msg time="2024-10-10T22:50:10.868291" level="INFO">Selecting checkbox 'id=jsonform-1-elt-consent'.</msg>
 <arg>${element}</arg>
 <doc>Selects the checkbox identified by ``locator``.</doc>
-<status status="PASS" start="2024-10-09T23:51:09.311498" elapsed="0.125085"/>
+<status status="PASS" start="2024-10-10T22:50:10.868291" elapsed="0.105705"/>
 </kw>
-<status status="PASS" start="2024-10-09T23:51:09.311498" elapsed="0.125085"/>
+<status status="PASS" start="2024-10-10T22:50:10.866512" elapsed="0.107484"/>
 </kw>
-<kw name="Click Element [Arguments] ${enterButton}" owner="CommonPO" source_name="Click Element [Arguments] ${element}">
+<kw name="Click Element [Arguments] ${BUTTON_ENTER_LOCATOR}" owner="CommonPO" source_name="Click Element [Arguments] ${element}">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-10-09T23:51:09.436583" level="INFO">Clicking element 'xpath=//input[@value='Enter Waiting Room']'.</msg>
+<msg time="2024-10-10T22:50:10.973996" level="INFO">Clicking element 'xpath=//input[@value='Enter Waiting Room']'.</msg>
 <arg>${element}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-10-09T23:51:09.436583" elapsed="0.116017"/>
+<status status="PASS" start="2024-10-10T22:50:10.973996" elapsed="0.070777"/>
 </kw>
-<status status="PASS" start="2024-10-09T23:51:09.436583" elapsed="0.117031"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-10-09T23:51:39.554727" level="INFO">Slept 30 seconds.</msg>
-<arg>30s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-10-09T23:51:09.553614" elapsed="30.001113"/>
-</kw>
-<kw name="Click Element [Arguments] ${continueButton}" owner="CommonPO" source_name="Click Element [Arguments] ${element}">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-10-09T23:51:39.555396" level="INFO">Clicking element 'xpath=//button[@data-action='reminder-btn-clicked']'.</msg>
-<msg time="2024-10-09T23:51:40.114366" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2024-10-09T23:51:40.115492" level="FAIL">ElementNotInteractableException: Message: element not interactable
-  (Session info: chrome=129.0.6668.90)
-Stacktrace:
-	GetHandleVerifier [0x00007FF75A49B645+29573]
-	(No symbol) [0x00007FF75A410470]
-	(No symbol) [0x00007FF75A2CB519]
-	(No symbol) [0x00007FF75A320C8F]
-	(No symbol) [0x00007FF75A3136BE]
-	(No symbol) [0x00007FF75A3472FA]
-	(No symbol) [0x00007FF75A312FF6]
-	(No symbol) [0x00007FF75A347510]
-	(No symbol) [0x00007FF75A3686BC]
-	(No symbol) [0x00007FF75A3470A3]
-	(No symbol) [0x00007FF75A3112DF]
-	(No symbol) [0x00007FF75A312441]
-	GetHandleVerifier [0x00007FF75A7CC58D+3375821]
-	GetHandleVerifier [0x00007FF75A817987+3684039]
-	GetHandleVerifier [0x00007FF75A80CDAB+3640043]
-	GetHandleVerifier [0x00007FF75A55B7C6+816390]
-	(No symbol) [0x00007FF75A41B77F]
-	(No symbol) [0x00007FF75A4175A4]
-	(No symbol) [0x00007FF75A417740]
-	(No symbol) [0x00007FF75A40659F]
-	BaseThreadInitThunk [0x00007FFCAD1B257D+29]
-	RtlUserThreadStart [0x00007FFCADAEAF08+40]
-</msg>
-<arg>${element}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="FAIL" start="2024-10-09T23:51:39.555396" elapsed="0.568314">ElementNotInteractableException: Message: element not interactable
-  (Session info: chrome=129.0.6668.90)
-Stacktrace:
-	GetHandleVerifier [0x00007FF75A49B645+29573]
-	(No symbol) [0x00007FF75A410470]
-	(No symbol) [0x00007FF75A2CB519]
-	(No symbol) [0x00007FF75A320C8F]
-	(No symbol) [0x00007FF75A3136BE]
-	(No symbol) [0x00007FF75A3472FA]
-	(No symbol) [0x00007FF75A312FF6]
-	(No symbol) [0x00007FF75A347510]
-	(No symbol) [0x00007FF75A3686BC]
-	(No symbol) [0x00007FF75A3470A3]
-	(No symbol) [0x00007FF75A3112DF]
-	(No symbol) [0x00007FF75A312441]
-	GetHandleVerifier [0x00007FF75A7CC58D+3375821]
-	GetHandleVerifier [0x00007FF75A817987+3684039]
-	GetHandleVerifier [0x00007FF75A80CDAB+3640043]
-	GetHandleVerifier [0x00007FF75A55B7C6+816390]
-	(No symbol) [0x00007FF75A41B77F]
-	(No symbol) [0x00007FF75A4175A4]
-	(No symbol) [0x00007FF75A417740]
-	(No symbol) [0x00007FF75A40659F]
-	BaseThreadInitThunk [0x00007FFCAD1B257D+29]
-	RtlUserThreadStart [0x00007FFCADAEAF08+40]
-</status>
-</kw>
-<status status="FAIL" start="2024-10-09T23:51:39.554727" elapsed="0.568983">ElementNotInteractableException: Message: element not interactable
-  (Session info: chrome=129.0.6668.90)
-Stacktrace:
-	GetHandleVerifier [0x00007FF75A49B645+29573]
-	(No symbol) [0x00007FF75A410470]
-	(No symbol) [0x00007FF75A2CB519]
-	(No symbol) [0x00007FF75A320C8F]
-	(No symbol) [0x00007FF75A3136BE]
-	(No symbol) [0x00007FF75A3472FA]
-	(No symbol) [0x00007FF75A312FF6]
-	(No symbol) [0x00007FF75A347510]
-	(No symbol) [0x00007FF75A3686BC]
-	(No symbol) [0x00007FF75A3470A3]
-	(No symbol) [0x00007FF75A3112DF]
-	(No symbol) [0x00007FF75A312441]
-	GetHandleVerifier [0x00007FF75A7CC58D+3375821]
-	GetHandleVerifier [0x00007FF75A817987+3684039]
-	GetHandleVerifier [0x00007FF75A80CDAB+3640043]
-	GetHandleVerifier [0x00007FF75A55B7C6+816390]
-	(No symbol) [0x00007FF75A41B77F]
-	(No symbol) [0x00007FF75A4175A4]
-	(No symbol) [0x00007FF75A417740]
-	(No symbol) [0x00007FF75A40659F]
-	BaseThreadInitThunk [0x00007FFCAD1B257D+29]
-	RtlUserThreadStart [0x00007FFCADAEAF08+40]
-</status>
+<status status="PASS" start="2024-10-10T22:50:10.973996" elapsed="0.070777"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
+<msg time="2024-10-10T22:50:41.051236" level="INFO">Slept 30 seconds.</msg>
 <arg>30s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2024-10-09T23:51:40.124987" elapsed="0.000173"/>
+<status status="PASS" start="2024-10-10T22:50:11.045777" elapsed="30.006569"/>
 </kw>
-<status status="FAIL" start="2024-10-09T23:51:05.436949" elapsed="34.688211">ElementNotInteractableException: Message: element not interactable
-  (Session info: chrome=129.0.6668.90)
-Stacktrace:
-	GetHandleVerifier [0x00007FF75A49B645+29573]
-	(No symbol) [0x00007FF75A410470]
-	(No symbol) [0x00007FF75A2CB519]
-	(No symbol) [0x00007FF75A320C8F]
-	(No symbol) [0x00007FF75A3136BE]
-	(No symbol) [0x00007FF75A3472FA]
-	(No symbol) [0x00007FF75A312FF6]
-	(No symbol) [0x00007FF75A347510]
-	(No symbol) [0x00007FF75A3686BC]
-	(No symbol) [0x00007FF75A3470A3]
-	(No symbol) [0x00007FF75A3112DF]
-	(No symbol) [0x00007FF75A312441]
-	GetHandleVerifier [0x00007FF75A7CC58D+3375821]
-	GetHandleVerifier [0x00007FF75A817987+3684039]
-	GetHandleVerifier [0x00007FF75A80CDAB+3640043]
-	GetHandleVerifier [0x00007FF75A55B7C6+816390]
-	(No symbol) [0x00007FF75A41B77F]
-	(No symbol) [0x00007FF75A4175A4]
-	(No symbol) [0x00007FF75A417740]
-	(No symbol) [0x00007FF75A40659F]
-	BaseThreadInitThunk [0x00007FFCAD1B257D+29]
-	RtlUserThreadStart [0x00007FFCADAEAF08+40]
-</status>
+<kw name="Element Should Be Visible [Arguments] ${TOGGLE_LABEL} 90" owner="CommonPO" source_name="Element Should Be Visible [Arguments] ${locator} ${timeout}">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-10-10T22:50:41.052346" elapsed="0.029305"/>
+</kw>
+<status status="PASS" start="2024-10-10T22:50:41.052346" elapsed="0.029305"/>
+</kw>
+<kw name="Get Text From Element [Arguments] ${TOGGLE_LABEL}" owner="CommonPO" source_name="Get Text From Element [Arguments] ${locator}">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-10-10T22:50:41.103674" level="INFO">${text} = Text me when the provider is ready</msg>
+<var>${text}</var>
+<arg>${locator}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-10T22:50:41.082935" elapsed="0.020739"/>
+</kw>
+<kw name="Return From Keyword" owner="BuiltIn">
+<msg time="2024-10-10T22:50:41.103674" level="INFO">Returning from the enclosing user keyword.</msg>
+<arg>${text}</arg>
+<doc>Returns from the enclosing user keyword.</doc>
+<status status="PASS" start="2024-10-10T22:50:41.103674" elapsed="0.001081"/>
+</kw>
+<msg time="2024-10-10T22:50:41.104755" level="INFO">${actual_text} = Text me when the provider is ready</msg>
+<var>${actual_text}</var>
+<status status="PASS" start="2024-10-10T22:50:41.082935" elapsed="0.021820"/>
+</kw>
+<kw name="Verify Message [Arguments] ${actual_text} ${EXPECTED_TOGGLE_TEXT}" owner="CommonPO" source_name="Verify Message [Arguments] ${actual_text} ${expect_text}">
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${actual_text}</arg>
+<arg>${expect_text}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-10-10T22:50:41.104755" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-10-10T22:50:41.104755" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-10-10T22:50:07.863905" elapsed="33.240850"/>
+</kw>
+<status status="PASS" start="2024-10-10T22:50:07.863905" elapsed="33.241880"/>
+</test>
+<test id="s1-t2" name="JOIN MEETING ROOM WITH USER B" line="12">
+<kw name="Join Meeting Room With User B" owner="MeetingRoomBPO">
+<kw name="Open Browser And Navigate To Page [Arguments] ${USER_NAME_B}" owner="CommonPO" source_name="Open Browser And Navigate To Page [Arguments] ${user_name}">
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${user_name}' == '${USER_NAME_A}'</arg>
+<arg>Open Chrome With Fake Media</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-10-10T22:50:41.107284" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Open Edge With Fake Media" owner="CommonPO">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-10-10T22:50:41.108282" level="INFO">${options} = &lt;selenium.webdriver.edge.options.Options object at 0x000001DBEC5DA3D0&gt;</msg>
+<var>${options}</var>
+<arg>selenium.webdriver.edge.options.Options()</arg>
+<arg>selenium.webdriver.edge</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-10-10T22:50:41.108282" elapsed="0.000000"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--use-fake-ui-for-media-stream</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-10-10T22:50:41.108282" elapsed="0.001013"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--use-fake-device-for-media-stream</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-10-10T22:50:41.109295" elapsed="0.000000"/>
+</kw>
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-10-10T22:50:41.109295" level="INFO">Creating an instance of the Edge WebDriver.</msg>
+<msg time="2024-10-10T22:50:41.118883" level="INFO">Applicable driver not found; attempting to install with Selenium Manager (Beta)</msg>
+<arg>Edge</arg>
+<arg>options=${options}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-10-10T22:50:41.109295" elapsed="1.873254"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-10-10T22:50:42.982549" level="INFO">Opening url 'https://team.vsee.me/u/robin4'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-10-10T22:50:42.982549" elapsed="1.285089"/>
+</kw>
+<status status="PASS" start="2024-10-10T22:50:41.108282" elapsed="3.160524"/>
+</kw>
+<arg>'${user_name}' == '${USER_NAME_B}'</arg>
+<arg>Open Edge With Fake Media</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-10-10T22:50:41.107284" elapsed="3.161522"/>
 </kw>
 <doc>Opens a browser and navigates to a specified URL based on the user name.</doc>
-<status status="FAIL" start="2024-10-09T23:51:05.436949" elapsed="34.689541">ElementNotInteractableException: Message: element not interactable
-  (Session info: chrome=129.0.6668.90)
-Stacktrace:
-	GetHandleVerifier [0x00007FF75A49B645+29573]
-	(No symbol) [0x00007FF75A410470]
-	(No symbol) [0x00007FF75A2CB519]
-	(No symbol) [0x00007FF75A320C8F]
-	(No symbol) [0x00007FF75A3136BE]
-	(No symbol) [0x00007FF75A3472FA]
-	(No symbol) [0x00007FF75A312FF6]
-	(No symbol) [0x00007FF75A347510]
-	(No symbol) [0x00007FF75A3686BC]
-	(No symbol) [0x00007FF75A3470A3]
-	(No symbol) [0x00007FF75A3112DF]
-	(No symbol) [0x00007FF75A312441]
-	GetHandleVerifier [0x00007FF75A7CC58D+3375821]
-	GetHandleVerifier [0x00007FF75A817987+3684039]
-	GetHandleVerifier [0x00007FF75A80CDAB+3640043]
-	GetHandleVerifier [0x00007FF75A55B7C6+816390]
-	(No symbol) [0x00007FF75A41B77F]
-	(No symbol) [0x00007FF75A4175A4]
-	(No symbol) [0x00007FF75A417740]
-	(No symbol) [0x00007FF75A40659F]
-	BaseThreadInitThunk [0x00007FFCAD1B257D+29]
-	RtlUserThreadStart [0x00007FFCADAEAF08+40]
-</status>
+<status status="PASS" start="2024-10-10T22:50:41.107284" elapsed="3.161522"/>
+</kw>
+<kw name="Click Link [Arguments] ${FOR_PROVIDER_ELEMENT}" owner="CommonPO" source_name="Click Link [Arguments] ${locator}">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-10-10T22:50:44.269823" level="INFO">Clicking link 'xpath=//a[text()="For Providers"]'.</msg>
+<arg>${locator}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-10T22:50:44.269823" elapsed="0.950184"/>
+</kw>
+<status status="PASS" start="2024-10-10T22:50:44.268806" elapsed="0.951201"/>
+</kw>
+<kw name="Element Should Be Enable [Arguments] ${EMAIL_INPUT}" owner="CommonPO" source_name="Element Should Be Enable [Arguments] ${locator}">
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-10-10T22:50:45.221019" elapsed="0.075940"/>
+</kw>
+<status status="PASS" start="2024-10-10T22:50:45.221019" elapsed="0.075940"/>
+</kw>
+<kw name="Input Text [Arguments] ${EMAIL_INPUT} ${USERNAME}" owner="CommonPO" source_name="Input Text [Arguments] ${element} ${value}">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-10T22:50:45.297962" level="INFO">Typing text 'monluoian@gmail.com' into text field 'xpath=//input[@placeholder='Email']'.</msg>
+<arg>${element}</arg>
+<arg>${value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-10T22:50:45.297962" elapsed="0.187036"/>
+</kw>
+<status status="PASS" start="2024-10-10T22:50:45.296959" elapsed="0.189048"/>
+</kw>
+<kw name="Input Text [Arguments] ${PASSWORD_INPUT} ${PASSWORD}" owner="CommonPO" source_name="Input Text [Arguments] ${element} ${value}">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-10T22:50:45.487007" level="INFO">Typing text 'devLab08@123' into text field 'xpath=//input[@placeholder='Password']'.</msg>
+<arg>${element}</arg>
+<arg>${value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-10T22:50:45.487007" elapsed="0.189082"/>
+</kw>
+<status status="PASS" start="2024-10-10T22:50:45.486007" elapsed="0.190082"/>
+</kw>
+<kw name="Click Element [Arguments] ${BUTTON_SIGN_IN_ID}" owner="CommonPO" source_name="Click Element [Arguments] ${element}">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-10T22:50:45.677087" level="INFO">Clicking element 'id=btnSignIn'.</msg>
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-10T22:50:45.677087" elapsed="0.191287"/>
+</kw>
+<status status="PASS" start="2024-10-10T22:50:45.676089" elapsed="0.192285"/>
+</kw>
+<kw name="Element Should Be Enable [Arguments] ${CALL_ELEMENT}" owner="CommonPO" source_name="Element Should Be Enable [Arguments] ${locator}">
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-10-10T22:50:45.869392" elapsed="3.895097"/>
+</kw>
+<status status="PASS" start="2024-10-10T22:50:45.869392" elapsed="3.895097"/>
+</kw>
+<kw name="Click Element [Arguments] ${CALL_ELEMENT}" owner="CommonPO" source_name="Click Element [Arguments] ${element}">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-10T22:50:49.765643" level="INFO">Clicking element 'xpath=(//a[@title='Call'])[1]'.</msg>
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-10T22:50:49.765643" elapsed="0.885127"/>
+</kw>
+<status status="PASS" start="2024-10-10T22:50:49.765643" elapsed="0.885127"/>
+</kw>
+<kw name="Element Should Be Enable [Arguments] ${CONTINUE_ON_THIS_BROWSER_CLASS}" owner="CommonPO" source_name="Element Should Be Enable [Arguments] ${locator}">
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-10-10T22:50:50.652804" elapsed="0.119052"/>
+</kw>
+<status status="PASS" start="2024-10-10T22:50:50.651768" elapsed="0.120088"/>
+</kw>
+<kw name="Click Element [Arguments] ${CONTINUE_ON_THIS_BROWSER_CLASS}" owner="CommonPO" source_name="Click Element [Arguments] ${element}">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-10T22:50:50.772858" level="INFO">Clicking element 'xpath=//div[@class='call_options round-10']'.</msg>
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-10T22:50:50.772858" elapsed="7.682881"/>
+</kw>
+<status status="PASS" start="2024-10-10T22:50:50.771856" elapsed="7.683883"/>
+</kw>
+<kw name="Element Should Be Enable [Arguments] ${CHAT_BUTTON}" owner="CommonPO" source_name="Element Should Be Enable [Arguments] ${locator}">
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-10-10T22:50:58.457205" elapsed="0.071706"/>
+</kw>
+<status status="PASS" start="2024-10-10T22:50:58.455739" elapsed="0.073172"/>
+</kw>
+<kw name="Click Element [Arguments] ${CHAT_BUTTON}" owner="CommonPO" source_name="Click Element [Arguments] ${element}">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-10T22:50:58.530923" level="INFO">Clicking element 'xpath=//button[@data-chatroom]'.</msg>
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-10T22:50:58.529922" elapsed="0.134753"/>
+</kw>
+<status status="PASS" start="2024-10-10T22:50:58.529922" elapsed="0.134753"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-10-10T22:51:28.666220" level="INFO">Slept 30 seconds.</msg>
+<arg>30s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-10-10T22:50:58.665941" elapsed="30.000800"/>
+</kw>
+<kw name="Input Text [Arguments] ${INPUT_TEXT_FIELD} ${MESSAGE}" owner="CommonPO" source_name="Input Text [Arguments] ${element} ${value}">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-10T22:51:28.668015" level="INFO">Typing text 'Hello !!' into text field 'xpath=//input[@type='textarea']'.</msg>
+<arg>${element}</arg>
+<arg>${value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-10T22:51:28.668015" elapsed="0.234568"/>
+</kw>
+<status status="PASS" start="2024-10-10T22:51:28.666741" elapsed="0.238377"/>
+</kw>
+<kw name="Press Key [Arguments] ${INPUT_TEXT_FIELD} ENTER" owner="CommonPO" source_name="Press Key [Arguments] ${locator} ${Key}">
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-10-10T22:51:28.907132" level="INFO">Sending key(s) ('ENTER',) to xpath=//input[@type='textarea'] element.</msg>
+<msg time="2024-10-10T22:51:29.266671" level="INFO">Pressing special key ENTER to element.</msg>
+<msg time="2024-10-10T22:51:29.266671" level="INFO">Releasing special key ENTER.</msg>
+<arg>${locator}</arg>
+<arg>${Key}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-10-10T22:51:28.906131" elapsed="0.471496"/>
+</kw>
+<status status="PASS" start="2024-10-10T22:51:28.905118" elapsed="0.473714"/>
+</kw>
+<status status="PASS" start="2024-10-10T22:50:41.106268" elapsed="48.272564"/>
+</kw>
+<status status="PASS" start="2024-10-10T22:50:41.106268" elapsed="48.274167"/>
 </test>
-<status status="FAIL" start="2024-10-09T23:51:05.099169" elapsed="35.031685"/>
+<test id="s1-t3" name="VERIFY MESSAGE" line="15">
+<kw name=" Verify Message" owner="MeetingRoomBPO">
+<kw name="Element Should Be Visible [Arguments] ${MESSAGE_RECEIVED_LOCATOR} 60" owner="CommonPO" source_name="Element Should Be Visible [Arguments] ${locator} ${timeout}">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-10-10T22:51:29.385141" elapsed="0.142132"/>
+</kw>
+<status status="PASS" start="2024-10-10T22:51:29.385141" elapsed="0.142132"/>
+</kw>
+<kw name="Get Text From Element [Arguments] ${MESSAGE_RECEIVED_LOCATOR}" owner="CommonPO" source_name="Get Text From Element [Arguments] ${locator}">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-10-10T22:51:29.595502" level="INFO">${text} = Hello !!</msg>
+<var>${text}</var>
+<arg>${locator}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-10T22:51:29.529295" elapsed="0.066207"/>
+</kw>
+<kw name="Return From Keyword" owner="BuiltIn">
+<msg time="2024-10-10T22:51:29.596896" level="INFO">Returning from the enclosing user keyword.</msg>
+<arg>${text}</arg>
+<doc>Returns from the enclosing user keyword.</doc>
+<status status="PASS" start="2024-10-10T22:51:29.595502" elapsed="0.001902"/>
+</kw>
+<msg time="2024-10-10T22:51:29.597404" level="INFO">${actual-message} = Hello !!</msg>
+<var>${actual-message}</var>
+<status status="PASS" start="2024-10-10T22:51:29.528303" elapsed="0.069101"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${actual-message}</arg>
+<arg>${MESSAGE}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-10-10T22:51:29.597404" elapsed="0.001290"/>
+</kw>
+<status status="PASS" start="2024-10-10T22:51:29.383618" elapsed="0.215076"/>
+</kw>
+<status status="PASS" start="2024-10-10T22:51:29.381957" elapsed="0.217945"/>
+</test>
+<status status="PASS" start="2024-10-10T22:50:07.612279" elapsed="81.988796"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="TC1">TC1</stat>
+<stat pass="3" fail="0" skip="0" id="s1" name="TC1">TC1</stat>
 </suite>
 </statistics>
 <errors>
