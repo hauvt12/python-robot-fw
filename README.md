@@ -19,7 +19,7 @@ Before running the project, make sure you have the following installed on your s
 
 1. **Clone repository**: 
    ```bash
-   git clone https://github.com/your-username/your-repo-name.git
+   git clone https://github.com/hauvt12/python-robot-fw.git
 
 2. **Navigate to project directory**: 
    ```bash
