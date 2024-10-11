@@ -1,0 +1,7 @@
+test-version.py
+
+*.html
+*.png
+*.xml
+*.chromedriver
+
