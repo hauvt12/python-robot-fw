@@ -1,5 +1,7 @@
 *** Settings ***
-Resource   ../locators/meetingRoomLocator.robot
+Resource   ../locators/callingPageLocator.robot
+Resource   ../locators/dashboardPageLocator.robot
+Resource   ../locators/loginPageLocator.robot
 Resource   ../config/ApplicationVariables.robot
 Resource   CommonPO.robot
 Library  SeleniumLibrary
