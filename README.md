@@ -32,9 +32,3 @@ Before running the project, make sure you have the following installed on your s
 4. **Run test scripts**: 
    ```bash
    robot .\TestCases\TC1.robot
-
-
-
-
-
-
