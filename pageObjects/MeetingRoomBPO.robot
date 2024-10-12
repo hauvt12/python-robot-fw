@@ -27,7 +27,9 @@ Join Meeting Room With User B
     Press Key [Arguments] ${INPUT_TEXT_FIELD} ENTER
 
 
- Verify Message
+ Verify Message And Leave Meeting
     Element Should Be Visible [Arguments] ${MESSAGE_RECEIVED_LOCATOR} 60
     ${actual-message}=    Get Text From Element [Arguments] ${MESSAGE_RECEIVED_LOCATOR}
     Should Be Equal    ${actual-message}    ${MESSAGE}       
+    Select Frame    ${IFRAME}
+    Click Element [Arguments] ${LEAVE}

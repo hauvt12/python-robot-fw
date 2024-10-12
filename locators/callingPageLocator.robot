@@ -7,3 +7,5 @@ ${INPUT_TEXT_FIELD}     xpath=//input[@type='textarea']
 ${TOOL_BOX}     xpath=//div[@class='toolbox-content-items']
 ${RECORD_ICON}      xpath=//span[text()='REC']
 ${MESSAGE_RECEIVED_LOCATOR}     xpath=//div[@class='webchat-message-content']
+${IFRAME}     id=jitsiConferenceFrame0
+${LEAVE}        xpath=//div[contains(@class,'hangup')]

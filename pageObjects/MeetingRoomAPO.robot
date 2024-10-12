@@ -17,3 +17,6 @@ Join Meeting Room With User A
     ${actual_text}=     Get Text From Element [Arguments] ${TOGGLE_LABEL}
     Verify Message [Arguments] ${actual_text} ${EXPECTED_TOGGLE_TEXT}    
         
+User A Leave Meeting
+    Select Frame    ${IFRAME}
+    Click Element [Arguments] ${LEAVE}
