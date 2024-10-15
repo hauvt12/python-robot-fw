@@ -8,6 +8,7 @@ Library  SeleniumLibrary
 *** Keywords ***
 Join Meeting Room With User A 
     Open Browser And Navigate To Page [Arguments] ${USER_NAME_A}
+    Element Should Be Visible [Arguments] ${FIRST_NAME_INPUT} 20
     Input Text [Arguments] ${FIRST_NAME_INPUT} ${USER_NAME_A}
     Select Checkbox [Arguments] ${CHECKBOX_ID}
     Click Element [Arguments] ${BUTTON_ENTER_LOCATOR}
@@ -18,5 +19,7 @@ Join Meeting Room With User A
     Verify Message [Arguments] ${actual_text} ${EXPECTED_TOGGLE_TEXT}    
         
 User A Leave Meeting
-    Select Frame    ${IFRAME}
-    Click Element [Arguments] ${LEAVE}
+    Switch Browser [Arguments] chrome
+    Element Should Be Visible [Arguments] ${END_VISIT} 10
+    Click Element [Arguments] ${END_VISIT}
+    Close Browser

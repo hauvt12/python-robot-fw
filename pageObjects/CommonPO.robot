@@ -9,20 +9,22 @@ Open Browser And Navigate To Page [Arguments] ${user_name}
     [Documentation]    Opens a browser and navigates to a specified URL based on the user name.
 
     Run Keyword If    '${user_name}' == '${USER_NAME_A}'       Open Chrome With Fake Media
+    
     Run Keyword If    '${user_name}' == '${USER_NAME_B}'       Open Edge With Fake Media
+ 
 
 Open Chrome With Fake Media
     ${options}=    Evaluate    selenium.webdriver.chrome.options.Options()    selenium.webdriver.chrome
     Call Method    ${options}    add_argument    --use-fake-ui-for-media-stream
     Call Method    ${options}    add_argument    --use-fake-device-for-media-stream
-    Create WebDriver    Chrome    options=${options}
+    ${chrome_driver}=     Create WebDriver    Chrome    options=${options}
     go to    ${URL}
 
 Open Edge With Fake Media
     ${options}=    Evaluate    selenium.webdriver.edge.options.Options()    selenium.webdriver.edge
     Call Method    ${options}    add_argument    --use-fake-ui-for-media-stream
     Call Method    ${options}    add_argument    --use-fake-device-for-media-stream
-    Create WebDriver    Edge    options=${options}
+    ${edge_driver}=     Create WebDriver    Edge    options=${options}
     go to    ${URL}
 
 
@@ -54,3 +56,6 @@ Element Should Be Enable [Arguments] ${locator}
 Element Should Be Visible [Arguments] ${locator} ${timeout}
     Wait Until Element Is Visible    ${locator}     ${timeout}
 
+Switch Browser [Arguments] ${value}
+    Run Keyword If    '${value}' == 'chrome'    Switch Browser      1
+    Run Keyword If    '${value}' == 'edge'      Switch Browser [    2
