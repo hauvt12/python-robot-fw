@@ -13,7 +13,6 @@ Join Meeting Room With User A
     Select Checkbox [Arguments] ${CHECKBOX_ID}
     Click Element [Arguments] ${BUTTON_ENTER_LOCATOR}
     sleep   30s
-    #Click Element [Arguments] ${CONTINUE_BUTTON_LOCATOR}
     Element Should Be Visible [Arguments] ${TOGGLE_LABEL} 90
     ${actual_text}=     Get Text From Element [Arguments] ${TOGGLE_LABEL}
     Verify Message [Arguments] ${actual_text} ${EXPECTED_TOGGLE_TEXT}    

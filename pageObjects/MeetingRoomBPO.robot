@@ -20,10 +20,8 @@ Join Meeting Room With User B
     Click Element [Arguments] ${CALL_ELEMENT}
     Element Should Be Enable [Arguments] ${CONTINUE_ON_THIS_BROWSER_CLASS}
     Click Element [Arguments] ${CONTINUE_ON_THIS_BROWSER_CLASS}
-#    Element Should Be Visible [Arguments] ${RECORD_ICON} 60
     Element Should Be Enable [Arguments] ${CHAT_BUTTON}
     Click Element [Arguments] ${CHAT_BUTTON}
-#    Element Should Be Enable [Arguments] ${INPUT_TEXT_FIELD}
     sleep   20s
     Input Text [Arguments] ${INPUT_TEXT_FIELD} ${MESSAGE}
     Press Key [Arguments] ${INPUT_TEXT_FIELD} ENTER

@@ -14,16 +14,20 @@ Open Browser And Navigate To Page [Arguments] ${user_name}
  
 
 Open Chrome With Fake Media
+    ${chrome_driver}=    Evaluate    webdriver_manager.chrome.ChromeDriverManager().install()    webdriver_manager.chrome
     ${options}=    Evaluate    selenium.webdriver.chrome.options.Options()    selenium.webdriver.chrome
     Call Method    ${options}    add_argument    --use-fake-ui-for-media-stream
     Call Method    ${options}    add_argument    --use-fake-device-for-media-stream
+    Call Method    ${options}    add_argument    --start-maximized
     ${chrome_driver}=     Create WebDriver    Chrome    options=${options}
     go to    ${URL}
 
 Open Edge With Fake Media
+    ${edge_driver}=    Evaluate    webdriver_manager.microsoft.EdgeChromiumDriverManager().install()    webdriver_manager.microsoft
     ${options}=    Evaluate    selenium.webdriver.edge.options.Options()    selenium.webdriver.edge
     Call Method    ${options}    add_argument    --use-fake-ui-for-media-stream
     Call Method    ${options}    add_argument    --use-fake-device-for-media-stream
+    Call Method    ${options}    add_argument    --start-maximized
     ${edge_driver}=     Create WebDriver    Edge    options=${options}
     go to    ${URL}
 
@@ -58,4 +62,4 @@ Element Should Be Visible [Arguments] ${locator} ${timeout}
 
 Switch Browser [Arguments] ${value}
     Run Keyword If    '${value}' == 'chrome'    Switch Browser      1
-    Run Keyword If    '${value}' == 'edge'      Switch Browser [    2
+    Run Keyword If    '${value}' == 'edge'      Switch Browser     2
